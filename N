@@ -1,0 +1,191 @@
+     // --- cacheDomElements FUNCTION (UPDATED) ---
+        function cacheDomElements() {
+            pageElements = {
+                chatsPage: document.getElementById('chatsPage'),
+                callsPage: document.getElementById('callsPage'),
+                updatesPage: document.getElementById('updatesPage'),
+                toolsPage: document.getElementById('toolsPage'),
+                conversationPage: document.getElementById('conversationPage'),
+                settingsPage: document.getElementById('settingsPage'),
+                accountPage: document.getElementById('accountPage'), 
+                createGroupPage: document.getElementById('createGroupPage'), 
+                createGroupInfoPage: document.getElementById('createGroupInfoPage'),
+                createChannelPage: document.getElementById('createChannelPage'),
+                myStatusPage: document.getElementById('myStatusPage'),
+                statusPreviewPage: document.getElementById('statusPreviewPage'),
+                selectContactPage: document.getElementById('selectContactPage'),
+                addContactPage: document.getElementById('addContactPage'),
+                chooseCountryPage: document.getElementById('chooseCountryPage'),
+                twoStepPage: document.getElementById('twoStepPage'), 
+                createPinPage: document.getElementById('createPinPage'), 
+                emailPage: document.getElementById('emailPage'),
+                languagePage: document.getElementById('languagePage'),
+                changeNumberInfoPage: document.getElementById('changeNumberInfoPage'), 
+                changeNumberInputPage: document.getElementById('changeNumberInputPage'),
+                fileStorageLoginPage: document.getElementById('fileStorageLoginPage'),
+                fileStoragePage: document.getElementById('fileStoragePage'),
+                fileViewPage: document.getElementById('fileViewPage'),
+                deleteAccountPage: document.getElementById('deleteAccountPage'),
+                requestInfoPage: document.getElementById('requestInfoPage'),
+                securityPage: document.getElementById('securityPage'),
+                passkeyPage: document.getElementById('passkeyPage')
+            };
+
+            // --- Cache all other elements ---
+            selectContactSearchButton = document.getElementById('selectContactSearchButton');
+            selectContactTitleContainer = document.getElementById('selectContactTitleContainer');
+            selectContactSearchContainer = document.getElementById('selectContactSearchContainer');
+            selectContactSearchInput = document.getElementById('selectContactSearchInput');
+            navButtons = document.querySelectorAll('.nav-button');
+            fabContainer = document.getElementById('fabContainer');
+            fabButton = document.getElementById('fabButton');
+            fabIcons = { chat: document.getElementById('fabIconChat'), call: document.getElementById('fabIconCall'), status: document.getElementById('fabIconStatus'), };
+            chatListEl = document.getElementById('chatList');
+            callListEl = document.getElementById('callList');
+            callContactListEl = document.getElementById('callContactList');
+            statusListEl = document.getElementById('statusList');
+            channelListEl = document.getElementById('channelList');
+            loadingElements = { chats: document.getElementById('loadingChats'), calls: document.getElementById('loadingCalls'), status: document.getElementById('loadingStatus'), channels: document.getElementById('loadingChannels'), messages: document.getElementById('loadingMessages'), };
+            navBadges = { chats: document.getElementById('navChatsBadge'), calls: document.getElementById('navCallsBadge'), };
+            convoHeader = { name: document.getElementById('convoName'), profilePic: document.getElementById('convoProfilePic'), };
+            messageListEl = document.getElementById('messageList');
+            messageForm = document.getElementById('messageForm');
+            messageInput = document.getElementById('messageInput');
+            backButton = document.getElementById('backButton');
+            chatSearchInput = document.getElementById('chatSearchInput');
+            settingsBackButton = document.getElementById('settingsBackButton');
+            settingsAccountButton = document.getElementById('settingsAccountButton');
+            accountBackButton = document.getElementById('accountBackButton');
+            createGroupBackButton = document.getElementById('createGroupBackButton');
+            createGroupContactList = document.getElementById('createGroupContactList');
+            selectedContactsContainer = document.getElementById('selectedContactsContainer'); 
+            createGroupNextButton = document.getElementById('createGroupNextButton'); 
+            groupInfoBackButton = document.getElementById('groupInfoBackButton'); 
+            groupNameInput = document.getElementById('groupNameInput'); 
+            memberCount = document.getElementById('memberCount'); 
+            groupInfoMemberList = document.getElementById('groupInfoMemberList'); 
+            createGroupConfirmButton = document.getElementById('createGroupConfirmButton'); 
+            createChannelBackButton = document.getElementById('createChannelBackButton');
+            channelNameInput = document.getElementById('channelNameInput');
+            channelDescInput = document.getElementById('channelDescInput');
+            createChannelConfirmButton = document.getElementById('createChannelConfirmButton');
+            myStatusButton = document.getElementById('myStatusButton');
+            myStatusBackButton = document.getElementById('myStatusBackButton');
+            myStatusContent = document.getElementById('myStatusContent');
+            myStatusCameraButton = document.getElementById('myStatusCameraButton'); 
+            statusFileInput = document.getElementById('statusFileInput');
+            statusPreviewBackButton = document.getElementById('statusPreviewBackButton');
+            statusPreviewImage = document.getElementById('statusPreviewImage');
+            statusCaptionInput = document.getElementById('statusCaptionInput');
+            statusSendButton = document.getElementById('statusSendButton');
+            headerMenuButton = document.getElementById('headerMenuButton');
+            headerMenu = document.getElementById('headerMenu');
+            updatesMenuButton = document.getElementById('updatesMenuButton'); 
+            updatesMenu = document.getElementById('updatesMenu'); 
+            menuOverlay = document.getElementById('menuOverlay');
+            appFooter = document.querySelector('footer');
+            myStatusMenuButton = document.getElementById('myStatusMenuButton');
+            myStatusMenu = document.getElementById('myStatusMenu');
+            selectContactBackButton = document.getElementById('selectContactBackButton');
+            newGroupOptionButton = document.getElementById('newGroupOptionButton');
+            newContactOptionButton = document.getElementById('newContactOptionButton');
+            megaContactList = document.getElementById('megaContactList');
+            inviteContactList = document.getElementById('inviteContactList');
+            contactCount = document.getElementById('contactCount');
+            addContactBackButton = document.getElementById('addContactBackButton');
+            countryListContainer = document.getElementById('countryListContainer');
+            countrySearchInput = document.getElementById('countrySearchInput');
+            openCountryListButton = document.getElementById('openCountryListButton');
+            selectedCountryCodeDisplay = document.getElementById('selectedCountryCodeDisplay');
+            accountTwoStepButton = document.getElementById('accountTwoStepButton');
+            twoStepBackButton = document.getElementById('twoStepBackButton');
+            turnOnTwoStepButton = document.getElementById('turnOnTwoStepButton');
+            turnOffTwoStepButton = document.getElementById('turnOffTwoStepButton');
+            changePinButton = document.getElementById('changePinButton');
+            createPinBackButton = document.getElementById('createPinBackButton');
+            avePinButton = document.getElementById('savePinButton');
+            accountEmailButton = document.getElementById('accountEmailButton');
+            emailBackButton = document.getElementById('emailBackButton');
+            emailPageContent = document.getElementById('emailPageContent');
+            emailLoading = document.getElementById('emailLoading');
+            noEmailAdded = document.getElementById('noEmailAdded');
+            showEmailInputButton = document.getElementById('showEmailInputButton');
+            emailDisplay = document.getElementById('emailDisplay');
+            currentEmailText = document.getElementById('currentEmailText');
+            emailVerifiedStatus = document.getElementById('emailVerifiedStatus');
+            changeEmailButton = document.getElementById('changeEmailButton');
+            emailEdit = document.getElementById('emailEdit');
+            emailInput = document.getElementById('emailInput');
+            saveEmailButton = document.getElementById('saveEmailButton');
+            settingsLangButton = document.getElementById('settingsLangButton');
+            languageBackButton = document.getElementById('languageBackButton');
+            languageListContainer = document.getElementById('languageListContainer');
+            currentLanguageDisplay = document.getElementById('currentLanguageDisplay');
+            accountChangeNumberButton = document.getElementById('accountChangeNumberButton');
+            changeNumberInfoBackButton = document.getElementById('changeNumberInfoBackButton');
+            changeNumberInfoNextButton = document.getElementById('changeNumberInfoNextButton');
+            changeNumberInputBackButton = document.getElementById('changeNumberInputBackButton');
+            changeNumberConfirmButton = document.getElementById('changeNumberConfirmButton');
+            
+               // --- NEW FILE STORAGE ELEMENTS ---
+            uploadIconHeaderButton = document.getElementById('uploadIconHeaderButton');
+            fileStorageLoginBackButton = document.getElementById('fileStorageLoginBackButton');
+            storageLoginButton = document.getElementById('storageLoginButton');
+            storageLoginError = document.getElementById('storageLoginError');
+            fileStorageBackButton = document.getElementById('fileStorageBackButton');
+            storageLogoutButton = document.getElementById('storageLogoutButton');
+            storageUsageText = document.getElementById('storageUsageText');
+            storageUsageBar = document.getElementById('storageUsageBar');
+            upgradeStorageButton = document.getElementById('upgradeStorageButton');
+            fileUploadInput = document.getElementById('fileUploadInput');
+            fileUploadButton = document.getElementById('fileUploadButton');
+            fileViewBackButton = document.getElementById('fileViewBackButton');
+            fileViewTitle = document.getElementById('fileViewTitle');
+            fileViewList = document.getElementById('fileViewList');
+            fileViewEmpty = document.getElementById('fileViewEmpty');
+
+             // --- NEW DELETE ACCOUNT ELEMENTS ---
+            accountDeleteButton = document.getElementById('accountDeleteButton');
+            deleteAccountBackButton = document.getElementById('deleteAccountBackButton');
+            deleteAccountChangeNumberButton = document.getElementById('deleteAccountChangeNumberButton');
+            deleteAccountConfirmButton = document.getElementById('deleteAccountConfirmButton');
+            openDeleteCountryListButton = document.getElementById('openDeleteCountryListButton');
+            selectedDeleteCountryDisplay = document.getElementById('selectedDeleteCountryDisplay');
+            deleteCountryCodeDisplay = document.getElementById('deleteCountryCodeDisplay');
+            deleteAccountError = document.getElementById('deleteAccountError');
+             
+            // --- NEW REQUEST INFO ELEMENTS ---
+            accountRequestInfoButton = document.getElementById('accountRequestInfoButton');
+            requestInfoBackButton = document.getElementById('requestInfoBackButton');
+            requestInfoButton = document.getElementById('requestInfoButton');
+            requestInfoError = document.getElementById('requestInfoError');
+            requestInfoInitialState = document.getElementById('requestInfoInitialState');
+            requestInfoPendingState = document.getElementById('requestInfoPendingState');
+            requestInfoReadyState = document.getElementById('requestInfoReadyState');
+            requestInfoReadyByDate = document.getElementById('requestInfoReadyByDate');
+            requestInfoExpiryDate = document.getElementById('requestInfoExpiryDate');
+            requestInfoDownloadButton = document.getElementById('requestInfoDownloadButton');
+            requestInfoDeleteButton = document.getElementById('requestInfoDeleteButton');
+
+          // --- NEW SECURITY NOTIFICATIONS ELEMENTS ---
+             accountSecurityButton = document.getElementById('accountSecurityButton');
+             securityBackButton = document.getElementById('securityBackButton');
+             securityToggle = document.getElementById('securityToggle');
+             securityToggleHandle = document.getElementById('securityToggleHandle');
+
+            // --- NEW PASSKEY ELEMENTS ---
+             accountPasskeyButton = document.getElementById('accountPasskeyButton');
+             passkeyBackButton = document.getElementById('passkeyBackButton');
+             createPasskeyButton = document.getElementById('createPasskeyButton');
+             passkeyOverlay = document.getElementById('passkeyOverlay');
+             passkeyConfirmModal = document.getElementById('passkeyConfirmModal');
+             passkeyConfirmCancel = document.getElementById('passkeyConfirmCancel');
+             passkeyConfirmContinue = document.getElementById('passkeyConfirmContinue');
+             passkeyAccountModal = document.getElementById('passkeyAccountModal');
+             passkeyAccountSelector = document.getElementById('passkeyAccountSelector');
+             passkeyUserPhone = document.getElementById('passkeyUserPhone');
+             passkeyFingerprintModal = document.getElementById('passkeyFingerprintModal');
+             fingerprintScanner = document.getElementById('fingerprintScanner');
+             fingerprintStatus = document.getElementById('fingerprintStatus');
+             fingerprintCancel = document.getElementById('fingerprintCancel');     
+        
